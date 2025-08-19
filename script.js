@@ -1,12 +1,4 @@
-/*
 
-Tooplate 2141 Minimal White
-
-https://www.tooplate.com/view/2141-minimal-white
-
-*/
-
-// JavaScript Document
 
         // Mobile menu toggle
         const menuToggle = document.getElementById('menuToggle');
@@ -97,4 +89,5 @@ https://www.tooplate.com/view/2141-minimal-white
             e.preventDefault();
             alert('Message sent successfully!');
             this.reset();
+
         });
