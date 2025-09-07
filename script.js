@@ -31,19 +31,18 @@
                 navbar.classList.remove('scrolled');
             }
 
-            // Active menu highlighting
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 100)) {
-                    current = section.getAttribute('id');
-                }
-            });
-
+            // Active menu highlighting based on current page
+            const currentPage = window.location.pathname.split('/').pop();
+            
             navItems.forEach(item => {
                 item.classList.remove('active');
-                if (item.getAttribute('href').slice(1) === current) {
+                const itemPage = item.getAttribute('href');
+                
+                // Check if the current page matches the nav item
+                if ((currentPage === '' && itemPage === 'index.html') ||
+                    (currentPage === itemPage) ||
+                    (currentPage === '' && itemPage === './index.html') ||
+                    (currentPage === itemPage.replace('./', ''))) {
                     item.classList.add('active');
                 }
             });
