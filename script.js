@@ -24,8 +24,8 @@
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
             
-            // Navbar style on scroll
-            if (window.scrollY > 50) {
+            // Navbar style on scroll - increased threshold to prevent false triggers
+            if (window.scrollY > 100) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
