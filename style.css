@@ -682,8 +682,8 @@ nav.scrolled {
 
 .point-number {
     position: absolute;
-    left: 0;
-    top: 0;
+    left: 10px;
+    top: 5px;
     font-size: 10px;
     font-weight: 700;
 }
@@ -1230,7 +1230,7 @@ nav.scrolled {
 .info-item::before {
     content: '';
     position: absolute;
-    left: 0;
+    left: 8px;
     top: 8px;
     width: 10px;
     height: 10px;
